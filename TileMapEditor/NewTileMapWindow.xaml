@@ -1,0 +1,46 @@
+﻿<Window x:Class="TileMapEditor.NewTileMapWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:TileMapEditor"
+        mc:Ignorable="d" WindowStartupLocation="CenterOwner"
+        Title="New Tilemap" Height="154" Width="155">
+    <Window.Resources>
+        <Style TargetType="{x:Type Button}">
+            <Setter Property="Margin" Value="10"/>
+        </Style>
+        <Style TargetType="{x:Type TextBox}">
+            <Setter Property="Margin" Value="5"/>
+        </Style>
+    </Window.Resources>
+
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"></RowDefinition>
+            <RowDefinition Height="Auto"></RowDefinition>
+            <RowDefinition Height="Auto"></RowDefinition>
+            <RowDefinition Height="Auto"></RowDefinition>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="Auto"></ColumnDefinition>
+            <ColumnDefinition Width="Auto"></ColumnDefinition>
+        </Grid.ColumnDefinitions>
+
+        <Label Grid.Row="0" Grid.Column="0">Tile Width</Label>
+        <TextBox Name="textbox_TileWidth" Grid.Row="0" Grid.Column="1" MinWidth="50"></TextBox>
+
+
+        <Label Grid.Row="1" Grid.Column="0">Map Width</Label>
+        <TextBox Name="textbox_MapWidth" Grid.Row="1" Grid.Column="1" MinWidth="50"></TextBox>
+
+
+        <Label Grid.Row="2" Grid.Column="0">Map Height</Label>
+        <TextBox Name="textbox_MapHeight" Grid.Row="2" Grid.Column="1" MinWidth="50"></TextBox>
+
+
+        <Button Grid.Row="3" Grid.Column="0" MinWidth="50" IsDefault="True" Click="Confirm_Click">_Ok</Button>
+        <Button Grid.Row="3" Grid.Column="1" MinWidth="50" IsCancel="True">_Cancel</Button>
+
+    </Grid>
+</Window>
